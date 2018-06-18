@@ -5,6 +5,8 @@ ps = PorterStemmer()
 
 stops = set(stopwords.words("english"))
 
+# input : string
+# returns : string
 def review_to_words(raw_review):
     review_text=BeautifulSoup(raw_review).get_text()
     letters_only= re.sub("[^a-zA-Z]"," ", review_text)
@@ -14,4 +16,4 @@ def review_to_words(raw_review):
     return(" ".join(words))
    
    
-# iterate over sentences and pass to the function
+# iterate over sentences and pass it to the function
